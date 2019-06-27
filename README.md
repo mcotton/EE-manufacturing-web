@@ -8,15 +8,17 @@ This is supporting code to go along with the published Application Note.  It is 
 
 ### Installation ###
 
-This project uses Flask and Python3.  It can be challenging to install and configure and it is recommend to use Docker.  To build the docker container
+This project uses Flask and Python3.  It is recommend to use Docker.
+
+To build the docker container
 
 `docker build -t webapp .`
 
 to run it
 
-`docker run -it webapp -p 3000:3000`
+`docker run -it -p 3000:3000 webapp`
 
-If you choose not to use Docker, you can find all the steps required to install this inside the `Dockerfile`
+If you choose not to use Docker, you can find all the steps required to install on a linux server inside the `Dockerfile`
 
 
 ### Questions, Comments, Suggestions ###
