@@ -215,14 +215,19 @@ def create_annotation(qr_code, camera_id, EE_uuid, EE_starttime, EE_endtime):
     return jsonify(ret)
 
 
-
+@app.route("/api/generate/id")
 @app.route("/api/generate")
-def generate_qrcode():
+def generate_qrcode(id=None):
     import pyqrcode
     import uuid
     import io
 
-    uuid_filename = str(uuid.uuid4())
+    if id:
+        uuid_filename = str(id)
+
+    else:
+        uuid_filename = str(uuid.uuid4())
+
 
     new_qrcode = pyqrcode.create(uuid_filename)
 
