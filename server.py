@@ -177,6 +177,7 @@ def details(qr_code_id):
 
         if qr:
             ret['qrcodes'] = qr.to_dict()
+            ret['host'] = een.host
             return render_template('details.html', template_values=ret)
         
 

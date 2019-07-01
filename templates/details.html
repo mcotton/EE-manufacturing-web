@@ -37,15 +37,15 @@
 
                 <tr>
                     <td>
-                        <a href="https://login.eagleeyenetworks.com/hist/index.html?id={{ row.camera_id }}&ts={{ row.EE_starttime }}" target="_blank">
-                            <img src="https://login.eagleeyenetworks.com/asset/prev/image.jpg?id={{ row.camera_id }}&timestamp={{ row.EE_starttime }}&asset_class=all" style="width: 150px;">
+                        <a href="{{ template_values['host'] }}/hist/index.html?id={{ row.camera_id }}&ts={{ row.EE_starttime }}" target="_blank">
+                            <img src="{{ template_values['host'] }}/asset/prev/image.jpg?id={{ row.camera_id }}&timestamp={{ row.EE_starttime }}&asset_class=all" style="width: 150px;">
                         </a>
                     </td>
                     <td>{{ row.camera_id }}</td>
                     <td>{{ row.EE_starttime | EE_date(row.camera_id) }}<br><sub>{{ row.EE_starttime }}</sub></td>
                     <td>{{ row.EE_endtime | EE_date(row.camera_id) }}<br><sub>{{ row.EE_endtime }}</sub></td>
                     <td>
-                        <a href="https://login.eagleeyenetworks.com/hist/index.html?id={{ row.camera_id }}&ts={{ row.EE_starttime }}" target="_blank">
+                        <a href="{{ template_values['host'] }}/hist/index.html?id={{ row.camera_id }}&ts={{ row.EE_starttime }}" target="_blank">
                             link to video
                         </a>
                     </td>
