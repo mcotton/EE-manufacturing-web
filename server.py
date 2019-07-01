@@ -202,6 +202,9 @@ def create_annotation(qr_code, camera_id, EE_uuid, EE_starttime, EE_endtime):
     if q == None:
         # create a new QRCode from the uuid passed in
         q = QRCodes(value=qr_code, description="", image_location=str('tmp/' + qr_code + '.png'))
+
+        # create a QR code image for this mystery code
+        generate_qrcode(id=qr_code)
     
         db.session.add(q)
         db.session.commit()
